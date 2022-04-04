@@ -1,0 +1,86 @@
+.whole-wrapper {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+    'aside-top nav'
+    'aside-content main_content';
+}
+
+.layout_aside-nav {
+    grid-area: aside-top;
+    width: var(--sidebar-width);
+    height: var(--navbar-height);
+    color: whitesmoke;
+    background-color: var(--nav-bg-color);
+    transition: all 2s;
+}
+.layout_aside-nav-full {
+    grid-area: aside-top;
+    width: var(--sidebar-width-cut);
+    height: var(--navbar-height);
+    color: whitesmoke;
+    background-color: var(--nav-bg-color);
+    transition: all 2s;
+}
+
+.layout_aside-content {
+    grid-area: aside-content;
+}
+
+
+.layout-nav {
+    grid-area: nav;
+    color: whitesmoke;
+    /* background-color: var(--nav-bg-color); */
+    /* commented out because we used the transition delay
+    to stop the background color from going small to big */
+    
+}
+
+.layout-main_content {
+    grid-area: main_content;
+    /* background-color: darkkhaki; */
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --sidebar-width:70px;
+        --sidebar-width-cut:225px;
+    }
+
+    .whole-wrapper {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content 1fr;
+        grid-template-areas:
+        'aside nav'
+        'main_content main_content';
+    }
+
+    .layout_aside-nav {
+        grid-area: aside;
+        width: var(--sidebar-width);
+    }
+
+    .layout_aside-nav-full {
+        grid-area: aside;
+        width: var(--sidebar-width-cut);
+    }
+
+    .layout_aside-content {
+        position: fixed;
+        top: var(--navbar-height);
+    }
+
+    .layout-nav {
+        grid-area: nav;
+    }
+
+    .layout-main_content {
+        grid-area: main_content;
+    }
+}

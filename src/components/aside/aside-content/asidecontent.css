@@ -1,0 +1,23 @@
+.nav-content-main {
+    position: fixed;
+    width: var(--sidebar-width);
+    background-color: var(--nav-bg-color);
+    height: calc(100% - var(--navbar-height));
+    transition: all 2s;
+}
+
+.nav-content-main-cut {
+    position: fixed;
+    width: var(--sidebar-width-cut);
+    background-color: var(--nav-bg-color);
+    height: calc(100% - var(--navbar-height));
+    transition: all 2s;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .nav-content-main {
+        transform: translate(-70px);
+    }
+
+}

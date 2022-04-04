@@ -1,0 +1,59 @@
+
+.nav-wrapper {
+    position: fixed;
+    width: var(--navbar-width);
+    height: var(--navbar-height);
+    background-color: var(--nav-bg-color);
+    transition: all 2s;
+    /*using this because nav wrapper is not fixed only this is fixed
+    and when not fixed the background move away*/
+
+}
+
+.nav-wrapper-full {
+    position: fixed;
+    width: var(--navbar-width-cut);
+    height: var(--navbar-height);
+    background-color: var(--nav-bg-color);
+    transition: all 2s;
+}
+
+.nav-left-right-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-left {
+    width: 100%;
+}
+
+.navbar-right {
+    width: 100%;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    /* .nav-wrapper {
+        transition: none;
+    } */
+
+    .nav-wrapper-full {
+        transition: all 2s;
+    }
+}
+
+
+
+/* @keyframes nav-no-move {
+    from { width: var(--navbar-width-cut);;
+
+    }
+    to {
+        width: var(--navbar-width-cut);;
+    }
+} */

@@ -1,0 +1,12 @@
+.main-content-container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+
+.content-wrap {
+    display: flex;
+    justify-content: space-between;
+    height: calc(90vh - var(--navbar-height));
+    background-color: darkkhaki;
+}
