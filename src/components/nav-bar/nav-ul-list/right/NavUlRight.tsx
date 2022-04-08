@@ -7,7 +7,7 @@ function NavUlRight() {
   return (
     <ul className='navulright'>
         {navDataRight.map((obj:INavType) =>
-        <li>
+        <li key={obj.id}>
             {obj.label}
         </li>
         )}

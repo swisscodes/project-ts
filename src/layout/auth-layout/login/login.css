@@ -1,0 +1,164 @@
+.login-contaner {
+    position: relative;
+    background: url('images/lll.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+
+
+.login-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'page-left page-right';
+}
+
+.info_area {
+    grid-area: page-left;
+}
+
+.form-contain {
+    grid-area: page-right;
+}
+
+.login-form-wrap {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    place-content: center;
+    color: #fff;
+}
+.login-form-infos {
+    display: flex;
+    place-content: center;
+    width: 20em;
+    height: 26.25em;
+    background-color: #00b894;
+    box-shadow: -4px 4px 8px 0 rgba(47, 54, 51, 1);
+    border-radius: 8%;
+    margin-top: 9.375em;
+}
+
+.image-wrap {
+    position: absolute;
+    top: 18%;
+}
+
+.image-wrap img {
+    width: 100px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.login-input-wrap {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    margin-top: 4.0625em;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-flow: column;
+    line-height: 2.5;
+    margin-top: 10px;
+    width: 80%;
+    margin: auto;
+
+}
+
+.form-wrapper * {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.login-form-header {
+    display: flex;
+    place-content: center;
+    font-size: 1.5625rem;
+    font-weight: bold;
+    line-height: 2;
+    background-color: rgba(3, 94, 75, .1);
+    align-items: center;
+    border-radius: 20px;
+}
+
+.input-row {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.125rem;
+}
+
+.input-row input {
+    outline: none;
+    padding-left: 60px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: rgb(190, 189, 189);
+}
+
+.input-row input[type=email]:focus, input[type=email]:hover, input[type=password]:focus, input[type=password]:hover {
+    background-color: #fff;
+}
+.input-row input[type=email]:focus .icons-div {
+    color: red;
+}
+
+
+.icons-div {
+    position: absolute;
+    top: 2px;
+    display: flex;
+    place-content: center;
+    width: 47px;
+    height: 100%;
+    background-color: #083d33;
+    border-radius: 5px 0 0 5px;
+    
+}
+
+.icons-div svg {
+    width: 50%;
+}
+
+.button-row button {
+    background-color: #083d33;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border: 1px solid rgba(3, 94, 75, 1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-row button:hover {
+    background-color: #045a49;
+}
+
+.link-row {
+    display: flex;
+    flex-flow: column;
+}
+
+.link-row a {
+    font-size: large;
+    font-weight:500;
+    color: rgba(0, 35, 236, 0.7);
+}
+
+.link-row span a:hover {
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .login-main {
+        grid-template-areas: 'page-right page-right';
+    }
+
+    .info_area {
+        display: none;
+    }
+}

@@ -32,7 +32,7 @@
 .layout-nav {
     grid-area: nav;
     color: whitesmoke;
-    /* background-color: var(--nav-bg-color); */
+    background-color: var(--nav-bg-color);
     /* commented out because we used the transition delay
     to stop the background color from going small to big */
     

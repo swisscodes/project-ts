@@ -3,3 +3,7 @@
     justify-content: flex-end;
     gap: 10px;
 }
+
+.navulright li {
+    margin: 1rem;
+}

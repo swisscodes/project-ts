@@ -20,10 +20,18 @@ export const navDataRight:Array<INavType> = [
         clicked:false
     },
     {
-        id:1,
+        id:2,
         label:'Hey2',
         icon:FcHome,
         url:'/',
         clicked:false
     },
+    {
+        id:3,
+        label:'Hey2',
+        icon:FcHome,
+        url:'/',
+        clicked:false
+    },
+    
 ]

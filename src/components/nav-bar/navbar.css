@@ -31,6 +31,7 @@
 }
 
 .navbar-right {
+    min-width:225px;
     width: 100%;
 }
 
@@ -43,17 +44,18 @@
     } */
 
     .nav-wrapper-full {
-        transition: all 2s;
+        animation: nav-no-move 0s linear 0s forwards;
+    }
+
+    @keyframes nav-no-move {
+        from { width: var(--navbar-width-cut);;
+    
+        }
+        to {
+            width: var(--navbar-width-full);;
+        }
     }
 }
 
 
 
-/* @keyframes nav-no-move {
-    from { width: var(--navbar-width-cut);;
-
-    }
-    to {
-        width: var(--navbar-width-cut);;
-    }
-} */

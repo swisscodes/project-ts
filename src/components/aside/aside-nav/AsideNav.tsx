@@ -3,7 +3,7 @@ import './asidenav.css'
 import logo from './logo.png'
 import React from 'react'
 
-function AsideNav({slideIn, toggleClick=(f:any)=> f}:any) {
+function AsideNav({slideIn, toggleClick=(f:MouseEvent)=> f}:any) {
   return (
     <div className='aside-nav-container'>
 			<div className={slideIn?`${'aside-nav-main-full'}`:`${'aside-nav-main'}`}>
