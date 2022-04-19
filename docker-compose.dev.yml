@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: swissbobo/frontend-dev:v1
+    volumes:
+      - ./frontend/src:/app/frontend/src
+      - /app/frontend/node_modules
+    ports:
+      - ${FHOST_PORT}:${FCONT_PORT}
+    env_file:
+      - ./frontend/env-docker/.dev.env
+    command: "npm run start"

@@ -82,5 +82,12 @@
 
     .layout-main_content {
         grid-area: main_content;
+        background-color: var(--nav-bg-color);
     }
 }
+
+/* @media only screen and (max-width: 1366px) {
+    .layout-main_content {
+        padding: 16px;
+    }
+} */

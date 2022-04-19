@@ -12,7 +12,7 @@ function useCheckToggle(topRef:any, contentRef:any) {
                 
             }
             else if(window.innerWidth < 600){
-                setSlideIn(()=>!slideIn)
+                setSlideIn((slideIn)=>!slideIn)
                 
             }
             setTimeout(() => {
@@ -29,7 +29,7 @@ function useCheckToggle(topRef:any, contentRef:any) {
     
     const setToggle = function(e:MouseEvent) {
         
-        setSlideIn(()=>!slideIn)
+        setSlideIn((slideIn)=>!slideIn)
         setTimeout(() => {
             let navImgSlide = document.querySelector(".image-logo");;
             navImgSlide?.classList.add("image-logo-animate")
