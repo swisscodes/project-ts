@@ -5,8 +5,8 @@ function MainContent() {
   return (
     <div className='main-content-container'>
       <div className='content-wrap'>
-        <div>femi6</div>
-        <div>Lola1</div>
+        <div>femi Update</div>
+        <div>Lola Latest</div>
       </div>
     </div>
   )
