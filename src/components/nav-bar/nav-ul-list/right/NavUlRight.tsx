@@ -2,16 +2,20 @@ import './navulright.css'
 import React from 'react'
 import { INavType } from '../../navBarData'
 import { navDataRight } from 'components/nav-bar/navBarData'
+import NavProfile from './NavProfile'
 
 function NavUlRight() {
   return (
-    <ul className='navulright'>
-        {navDataRight.map((obj:INavType) =>
-        <li key={obj.id}>
-            {obj.label}
-        </li>
-        )}
-    </ul>
+    <div className='navulwrap'> 
+      <ul className='navulright'>
+          {navDataRight.map((obj:INavType) =>
+          <li key={obj.id}>
+              {<obj.icon />}
+          </li>
+          )}
+      </ul>
+      <div className='profile-div'><NavProfile/></div>
+    </div>
   )
 }
 

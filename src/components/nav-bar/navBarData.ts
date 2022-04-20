@@ -14,21 +14,21 @@ export interface INavType {
 export const navDataRight:Array<INavType> = [
     {
         id:1,
-        label:'Hey1',
+        label:'mode',
         icon:FcHome,
         url:'/',
         clicked:false
     },
     {
         id:2,
-        label:'Hey2',
+        label:'settings',
         icon:FcHome,
         url:'/',
         clicked:false
     },
     {
         id:3,
-        label:'Hey2',
+        label:'profile',
         icon:FcHome,
         url:'/',
         clicked:false

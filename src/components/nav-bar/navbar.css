@@ -43,8 +43,19 @@
         transition: none;
     } */
 
-    .nav-wrapper-full {
+    /* .nav-wrapper-full {
         animation: nav-no-move 0s linear 0s forwards;
+    } */
+
+    .navbar-left {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15px;
+        overflow: hidden;
+    }
+
+    .navbar-right {
+        display: none;
     }
 
     @keyframes nav-no-move {
