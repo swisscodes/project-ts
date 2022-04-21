@@ -6,6 +6,7 @@
 }
 
 .navulright {
+    position: relative;
     display: flex;
     gap: 10px;
 }
@@ -13,3 +14,17 @@
 .navulright li {
     margin: 1rem;
 }
+
+.navulright svg {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.navitem-hover {
+    position: fixed;
+}
+
+/* .navulright svg:hover {
+    transform: rotate(20deg);
+} */

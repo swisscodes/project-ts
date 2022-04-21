@@ -1,5 +1,7 @@
-import {FcHome } from "react-icons/fc";
+import {FcHome, FcServices } from "react-icons/fc";
 import { IconType } from "react-icons";
+import noti from './images/noti.svg'
+
 
 export interface INavType {
     id:number,
@@ -19,17 +21,19 @@ export const navDataRight:Array<INavType> = [
         url:'/',
         clicked:false
     },
+    
     {
         id:2,
-        label:'settings',
+        label:'profile',
         icon:FcHome,
         url:'/',
         clicked:false
     },
+
     {
         id:3,
-        label:'profile',
-        icon:FcHome,
+        label:'settings',
+        icon:FcServices,
         url:'/',
         clicked:false
     },
