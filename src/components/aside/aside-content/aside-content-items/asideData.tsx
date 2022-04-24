@@ -1,5 +1,6 @@
 import './asidedata.css'
-import {ReactComponent as  Project1 } from './icons/project1.svg'
+import {ReactComponent as  Project } from './icons/project.svg'
+import {ReactComponent as  Software } from './icons/software.svg'
 
 
 
@@ -18,7 +19,7 @@ const sideBarData:ArrayOfSideMenu = [
     {
         id:1,
         url:'/',
-        icon:<Project1 className='aside-icon'/>,
+        icon:<Project className='aside-icon'/>,
         label:'My projects',
         subItem: [{
             id:1,
@@ -30,7 +31,7 @@ const sideBarData:ArrayOfSideMenu = [
     {
         id:2,
         url:'',
-        icon:<Project1 className='aside-icon'/>,
+        icon:<Project className='aside-icon'/>,
         label:'Inquiries',
         subItem: [
             {
@@ -50,19 +51,19 @@ const sideBarData:ArrayOfSideMenu = [
     {
         id:3,
         url:'addmaterial',
-        icon:<Project1 className='aside-icon'/>,
+        icon:<Project className='aside-icon'/>,
         label:'Material Add',
     },
     {
         id:4,
         url:'table',
-        icon:<Project1 className='aside-icon'/>,
+        icon:<Project className='aside-icon'/>,
         label:'Bom Pro',
     },
     {
         id:5,
         url:'create-project',
-        icon:<Project1 className='aside-icon'/>,
+        icon:<Software className='aside-icon'/>,
         label:'Project',
     },
     
