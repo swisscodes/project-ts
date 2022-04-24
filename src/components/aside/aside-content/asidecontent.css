@@ -14,8 +14,33 @@
     transition: all .4s ease-in-out;
 }
 
-.icons-container {
-    display: flex;
+.aside_icons-container {
+    position: relative;
+    height: 3.125em;
+    margin-top: 1.875em;
+    color: whitesmoke;
+}
+
+.aside_svg_div-wrap {
+    display: grid;
+    grid-template-columns: 5em 1fr;
+    text-align: center;
+}
+
+.kkkk {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+.aside_text {
+    display: inline-flex;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {

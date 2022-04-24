@@ -30,7 +30,7 @@ const sideBarData:ArrayOfSideMenu = [
     {
         id:2,
         url:'',
-        icon:'',
+        icon:<Project1 className='aside-icon'/>,
         label:'Inquiries',
         subItem: [
             {
