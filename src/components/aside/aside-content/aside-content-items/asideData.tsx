@@ -1,11 +1,12 @@
-import project1 from './icons/project1.svg'
-import { IconType } from 'react-icons'
+import './asidedata.css'
+import {ReactComponent as  Project1 } from './icons/project1.svg'
+
 
 
 export interface sideBarType  {
     id:number,
     url:string,
-    icon?:JSX.Element | string,
+    icon?:JSX.Element|string,
     label:string
     subItem?:Array<sideBarType>
 }
@@ -17,7 +18,7 @@ const sideBarData:ArrayOfSideMenu = [
     {
         id:1,
         url:'/',
-        icon:project1,
+        icon:<Project1 className='aside-icon'/>,
         label:'My projects',
         subItem: [{
             id:1,
@@ -49,24 +50,23 @@ const sideBarData:ArrayOfSideMenu = [
     {
         id:3,
         url:'addmaterial',
-        icon:'bx bx-desktop sideItems-icons',
+        icon:<Project1 className='aside-icon'/>,
         label:'Material Add',
     },
     {
         id:4,
         url:'table',
-        icon:'bx bx-desktop sideItems-icons',
+        icon:<Project1 className='aside-icon'/>,
         label:'Bom Pro',
     },
     {
         id:5,
         url:'create-project',
-        icon:'bx bx-desktop sideItems-icons',
+        icon:<Project1 className='aside-icon'/>,
         label:'Project',
     },
     
 ]
-
 
 
 export default sideBarData

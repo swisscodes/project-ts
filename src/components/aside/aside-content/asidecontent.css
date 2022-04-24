@@ -14,6 +14,9 @@
     transition: all .4s ease-in-out;
 }
 
+.icons-container {
+    display: flex;
+}
 
 @media only screen and (max-width: 600px) {
     .nav-content-main {
