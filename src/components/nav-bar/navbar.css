@@ -4,7 +4,7 @@
     width: var(--navbar-width);
     height: var(--navbar-height);
     background-color: var(--nav-bg-color);
-    transition: all .4s ease-in-out;
+    transition: all 1s ease-in-out;
     /*using this because nav wrapper is not fixed only this is fixed
     and when not fixed the background move away*/
 
@@ -15,7 +15,7 @@
     width: var(--navbar-width-cut);
     height: var(--navbar-height);
     background-color: var(--nav-bg-color);
-    transition: all .4s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .nav-left-right-wrap {

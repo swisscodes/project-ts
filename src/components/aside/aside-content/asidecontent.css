@@ -3,7 +3,7 @@
     width: var(--sidebar-width);
     background-color: var(--nav-bg-color);
     height: calc(100% - var(--navbar-height));
-    transition: all .4s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .nav-content-main-cut {
@@ -11,20 +11,23 @@
     width: var(--sidebar-width-cut);
     background-color: var(--nav-bg-color);
     height: calc(100% - var(--navbar-height));
-    transition: all .4s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .aside_icons-container {
-    position: relative;
-    height: 3.125em;
     margin-top: 1.875em;
     color: whitesmoke;
+}
+.aside_icons-main {
+    position: relative;
+    margin-bottom: 10px;
 }
 
 .aside_svg_div-wrap {
     display: grid;
-    grid-template-columns: 5em 1fr;
+    grid-template-columns: 4.375em 1fr;
     text-align: center;
+    height: 3.125em;
 }
 
 .kkkk {
@@ -32,7 +35,7 @@
     justify-content: center;
     align-items: center;
     width: 70px;
-    height: 70px;
+    font-size: 2rem;
 }
 
 .aside_text {
@@ -41,6 +44,7 @@
     align-items: center;
     overflow: hidden;
     text-align: center;
+    white-space: nowrap;
 }
 
 @media only screen and (max-width: 600px) {
