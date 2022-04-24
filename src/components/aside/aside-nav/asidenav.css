@@ -2,7 +2,7 @@
     position: fixed;
     width: var(--sidebar-width);
     height: var(--navbar-height);
-    transition: all 1s ease-in-out;
+    transition: all .3s ease-in-out;
     background-color: var(--nav-bg-color);
     border-bottom: 1px solid rgba(184, 100, 100, 1);
     border-right: 1px solid rgba(184, 100, 100, .1);
@@ -13,7 +13,7 @@
     width: var(--sidebar-width-cut);
     height: var(--navbar-height);
     background-color: var(--nav-bg-color);
-    transition: all 1s ease-in-out;
+    transition: all .3s ease-in-out;
     border-bottom: 1px solid rgba(184, 100, 100, 1);
     border-right: 1px solid rgba(184, 100, 100, .1);
 
@@ -36,7 +36,7 @@
     display: inline-flex;
     align-items: center;
     /* width: 0px; */
-    animation: imageclose 1s linear forwards;
+    animation: imageclose .3s linear forwards;
 }
 
 [class^=image-logo] img {
@@ -75,7 +75,7 @@
     }
 
     .image-logo-animate {
-        animation: imageclose 1s linear forwards
+        animation: imageclose .3s linear forwards
     }
 
     .image-logo-hide {
