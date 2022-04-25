@@ -2,7 +2,6 @@ import './asidecontent.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import sideBarData from './aside-content-items/asideData'
-import { icons } from 'react-icons'
 
 function AsideContent({slideIn}:any) {
   return (
@@ -11,7 +10,7 @@ function AsideContent({slideIn}:any) {
         <div className='aside_icons-container'>
         {sideBarData.map((item) => {
           return (
-            <div className='aside_icons-main'>
+            <div key={item.id} className='aside_icons-main'>
                 <Link className='aside_svg_div-wrap' to="#">
                 <div className='kkkk'>{item.icon}</div>
                 <div className='aside_text'>{item.label}</div>

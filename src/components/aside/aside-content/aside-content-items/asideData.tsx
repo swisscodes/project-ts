@@ -1,6 +1,9 @@
 import './asidedata.css'
 import {ReactComponent as  Project } from './icons/project.svg'
-import {ReactComponent as  Software } from './icons/software.svg'
+import {ReactComponent as  Computer } from './icons/computer.svg'
+import {ReactComponent as  Analytics } from './icons/analytics.svg'
+import {ReactComponent as  RssFeed } from './icons/rss-feed.svg'
+import {ReactComponent as  Atm } from './icons/atm.svg'
 
 
 
@@ -19,8 +22,8 @@ const sideBarData:ArrayOfSideMenu = [
     {
         id:1,
         url:'/',
-        icon:<Project className='aside-icon'/>,
-        label:'My projects',
+        icon:<Computer className='aside-icon'/>,
+        label:'My Projects',
         subItem: [{
             id:1,
             url:'/d3',
@@ -31,8 +34,8 @@ const sideBarData:ArrayOfSideMenu = [
     {
         id:2,
         url:'',
-        icon:<Project className='aside-icon'/>,
-        label:'Inquiries',
+        icon:<Analytics className='aside-icon'/>,
+        label:'Analytics',
         subItem: [
             {
                 id:1,
@@ -51,20 +54,20 @@ const sideBarData:ArrayOfSideMenu = [
     {
         id:3,
         url:'addmaterial',
-        icon:<Project className='aside-icon'/>,
-        label:'Material Add',
+        icon:<Atm className='aside-icon'/>,
+        label:'Finacial Matters',
     },
     {
         id:4,
         url:'table',
-        icon:<Project className='aside-icon'/>,
-        label:'Bom Pro',
+        icon:<RssFeed className='aside-icon'/>,
+        label:'Rss Feed',
     },
     {
         id:5,
         url:'create-project',
-        icon:<Software className='aside-icon'/>,
-        label:'Project',
+        icon:<Project className='aside-icon'/>,
+        label:'Insight',
     },
     
 ]
