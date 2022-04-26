@@ -1,0 +1,90 @@
+.aside_icons-container {
+    margin-top: 1.875em;
+    color: whitesmoke;
+}
+
+.aside_icons-main {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.aside_svg_div-wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 4.375em 1fr;
+    text-align: center;
+    height: 3.125em;
+}
+
+.aside_svg_div-wrap:hover {
+    background-color: rgb(95, 78, 53);
+}
+
+.testlink {
+    background-color: rgb(240, 230, 140, 0.2);
+}
+
+.aside_svg_div-wrap:hover .sudo::after {
+    visibility: visible;
+    transition: all 3s .3s;
+}
+
+.aside_icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    font-size: 2rem;
+}
+
+.aside_text {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.sudo::after {
+    content: '\25B2';
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    color: rgba(231, 220, 117, 0.7);
+    visibility: visible;
+    border-radius: 50%;
+    
+    /* box-shadow: 2px 2px 2px 1px rgba(65, 40, 40, 0.2); */
+    transform: rotate(-90deg);
+}
+
+.sub_item {
+    visibility: hidden;
+    position:absolute;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .sudo {
+        display: none;   
+    }
+
+    .sudo-mobile::after {
+        content: '\25B2';
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        padding: 0 10px;
+        font-size: 1.2rem;
+        color: rgba(231, 220, 117, 0.7);
+        visibility: visible;
+        border-radius: 50%;
+    
+    /* box-shadow: 2px 2px 2px 1px rgba(65, 40, 40, 0.2); */
+    transform: rotate(-90deg);
+    }
+
+}

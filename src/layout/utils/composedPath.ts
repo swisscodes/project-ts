@@ -1,7 +1,9 @@
 import {useState, useEffect, MouseEvent} from 'react'
 
-function useCheckToggle(topRef:any, contentRef:any) {
-    const [slideIn, setSlideIn] = useState(false)
+type typeUseCheckReturn = [boolean, (e:MouseEvent)=>void]
+
+function useCheckToggle(topRef:any, contentRef:any):typeUseCheckReturn {
+    const [slideIn, setSlideIn] = useState<boolean>(false)
 
     useEffect(() => {
         
