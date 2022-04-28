@@ -2,9 +2,9 @@ import './asidewrap.css'
 import Head from './head/Head'
 
 
-function AsideWrap({slideIn}:any) {
+function AsideWrap({slideIn, isMobile, toggleClick}:any) {
   return (
-		<Head slideIn={slideIn}/>
+		<Head slideIn={slideIn} isMobile={isMobile} toggleClick={toggleClick}/>
 	)
 }
 

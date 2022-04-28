@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Sub() {
+function Sub({data, currentObj, subState}:any) {
   return (
-    <div>Sub</div>
+    <>
+    {currentObj === data.id && <div className={subState?`${'show'}`:`${'dont_show'}`}>Sub</div> }
+    </>
   )
 }
 

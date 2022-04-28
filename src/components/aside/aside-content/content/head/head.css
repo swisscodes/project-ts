@@ -20,14 +20,10 @@
     background-color: rgb(95, 78, 53);
 }
 
-.testlink {
+.activelink {
     background-color: rgb(240, 230, 140, 0.2);
 }
 
-.aside_svg_div-wrap:hover .sudo::after {
-    visibility: visible;
-    transition: all 3s .3s;
-}
 
 .aside_icon {
     display: inline-flex;
@@ -61,7 +57,38 @@
     transform: rotate(-90deg);
 }
 
-.sub_item {
+/* .sudo:hover::after {
+    visibility: visible;
+    color: red;
+    transform: rotate(-180deg);
+} */
+
+.rrr::after{
+    
+        content: '\25B2';
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        padding: 0 10px;
+        font-size: 1.2rem;
+        color: rgba(231, 220, 117, 0.7);
+        visibility: visible;
+        border-radius: 50%;
+        
+        /* box-shadow: 2px 2px 2px 1px rgba(65, 40, 40, 0.2); */
+        transform: rotate(-180deg);
+    
+}
+
+.show {
+    visibility: visible;
+    width: 100%;
+    min-height: 150px;
+    transform: translateY(10px);
+    transition: all .5s;
+}
+
+.dont_show {
     visibility: hidden;
     position:absolute;
 }
@@ -83,8 +110,26 @@
         visibility: visible;
         border-radius: 50%;
     
-    /* box-shadow: 2px 2px 2px 1px rgba(65, 40, 40, 0.2); */
-    transform: rotate(-90deg);
+        /* box-shadow: 2px 2px 2px 1px rgba(65, 40, 40, 0.2); */
+        transform: rotate(-90deg);
     }
+
+    .rrr::after{
+    
+        content: '\25B2';
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        padding: 0 10px;
+        font-size: 1.2rem;
+        color: rgba(231, 220, 117, 0.7);
+        visibility: visible;
+        border-radius: 50%;
+        
+        /* box-shadow: 2px 2px 2px 1px rgba(65, 40, 40, 0.2); */
+        transform: rotate(-180deg);
+    
+    }
+
 
 }

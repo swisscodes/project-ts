@@ -15,7 +15,7 @@ function MainLayout() {
 	const topNavRef = useRef<HTMLDivElement>(null)
 	const navContentRef = useRef<HTMLDivElement>(null)
 
-	const [toggle, setToggle] = useCheckToggle(topNavRef, navContentRef)
+	const [toggle, isMobile, setToggle] = useCheckToggle(topNavRef, navContentRef)
 
   return (
 		<>
@@ -27,7 +27,7 @@ function MainLayout() {
 			</div>
 
 			<div className="layout_aside-content" ref={navContentRef}>
-				<AsideContent slideIn={toggle} />
+				<AsideContent slideIn={toggle} isMobile={isMobile} toggleClick={setToggle}/>
 			</div>
 
 			<div className="layout-nav">

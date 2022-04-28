@@ -1,9 +1,10 @@
 import {useState, useEffect, MouseEvent} from 'react'
 
-type typeUseCheckReturn = [boolean, (e:MouseEvent)=>void]
+type typeUseCheckReturn = [boolean, boolean, (e:MouseEvent)=>void]
 
 function useCheckToggle(topRef:any, contentRef:any):typeUseCheckReturn {
     const [slideIn, setSlideIn] = useState<boolean>(false)
+    const [isMobile, setIsMobile] = useState<boolean>(false)
 
     useEffect(() => {
         
@@ -15,7 +16,6 @@ function useCheckToggle(topRef:any, contentRef:any):typeUseCheckReturn {
             }
             else if(window.innerWidth < 600){
                 setSlideIn((slideIn)=>!slideIn)
-                
             }
             setTimeout(() => {
                 let navImgSlide = document.querySelector(".image-logo");;
@@ -24,6 +24,7 @@ function useCheckToggle(topRef:any, contentRef:any):typeUseCheckReturn {
         }
         if(slideIn && window.innerWidth < 600) {
             document.addEventListener('click', addEvent)
+            setIsMobile(() => true)
 
         }
         return () => document.removeEventListener('click', addEvent)
@@ -39,7 +40,7 @@ function useCheckToggle(topRef:any, contentRef:any):typeUseCheckReturn {
         
     }
 
-    return [slideIn, setToggle]
+    return [slideIn, isMobile, setToggle]
 }
 
 export {useCheckToggle}

@@ -1,17 +1,17 @@
 import './asidecontent.css'
-import React from 'react'
 import AsideWrap from './content/AsideWrap'
-import sideBarData from './aside-content-items/asideData'
 
 type Tprop = {
   slideIn:boolean
+  isMobile:boolean
+  toggleClick:Function
 }
 
-function AsideContent({slideIn}:Tprop) {
+function AsideContent({slideIn, isMobile, toggleClick}:Tprop) {
   return (
     <div className='aside-content-wrap'>
       <div className={slideIn?`${'nav-content-main-cut'}`:`${'nav-content-main'}`}>
-        <AsideWrap slideIn={slideIn}/>
+        <AsideWrap slideIn={slideIn} isMobile={isMobile} toggleClick={toggleClick}/>
       </div>
     </div>
   )
