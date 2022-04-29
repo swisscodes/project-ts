@@ -6,13 +6,14 @@ import sideBarData from '../../aside-content-items/asideData'
 import {sideBarType} from '../../aside-content-items/asideData'
 import Sub from '../sub/Sub'
 
+
 type refObj = {
   label?:any
 }
 
-function Head({slideIn, isMobile, toggleClick}:any) {
+function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
   
-  const [subState, setSubState] = useState<boolean>(false)
+  // const [subState, setSubState] = useState<boolean>(false)
   const [currentObj, setCurrentObj] = useState<number>()
 
   const labelsRef = useRef<refObj>({})
@@ -59,8 +60,6 @@ function Head({slideIn, isMobile, toggleClick}:any) {
     //   setSubState((subState:boolean) => !subState)
     // }
     setSubState((subState:boolean) => !subState)
-    
-    
 
     let a = labelsRef.current[item.label as keyof refObj]
     let b = dropRef.current[item.label as keyof refObj]
@@ -68,7 +67,6 @@ function Head({slideIn, isMobile, toggleClick}:any) {
     if(slideIn && !isMobile) {
       toggleClick((slideIn:boolean)=> !slideIn)
     }
-    
 
     if((a.classList.contains('sudo')) || ((a.classList.contains('sudo-mobile')) && slideIn)) {
       a.classList.toggle('rrr')
