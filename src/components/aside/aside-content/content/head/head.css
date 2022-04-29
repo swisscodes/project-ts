@@ -81,16 +81,21 @@
 }
 
 .show {
-    visibility: visible;
     width: 100%;
     min-height: 150px;
-    transform: translateY(10px);
-    transition: all .5s;
+    transform: translateY(0px);
+    transition: transform .5s;
+    background-color: rgb(77, 77, 73); /* for console log */
 }
 
 .dont_show {
     visibility: hidden;
     position:absolute;
+    
+    transform: translateY(-50px);
+    background-color: rgb(77, 77, 73);
+    min-height: 150px;
+    width: var(--sidebar-width);
 }
 
 

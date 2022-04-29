@@ -26,10 +26,11 @@ function Head({slideIn, isMobile, toggleClick}:any) {
 					return (
 						<div  key={item.id} 
                   className='aside_icons-main'
-                  onClick={(e) => clickedLink(e, item, setSubState, slideIn)}
             >
 								<Link className={item.url && params?.startsWith(item.url)?'aside_svg_div-wrap activelink':'aside_svg_div-wrap'} 
-                  to="#">
+                  to="#"
+                  onClick={(e) => clickedLink(e, item, setSubState, slideIn)}
+                >
 								  <div className='aside_icon'>{item.icon}</div>
 								  <div className={item.subItem && !slideIn?
                     `${'aside_text sudo'}`:
@@ -39,7 +40,7 @@ function Head({slideIn, isMobile, toggleClick}:any) {
                     {item.label}
                   </div>
 								</Link>
-								<div ref={(el) => giveRef(el, item, dropRef) }>
+								<div ref={(el) => giveRef(el, item, dropRef)}>
                   {item.subItem && (!slideIn || isMobile) && <Sub data={item} currentObj={currentObj} subState={subState}/>}
                 </div>
 						</div>
@@ -53,19 +54,40 @@ function Head({slideIn, isMobile, toggleClick}:any) {
   function clickedLink(e:React.SyntheticEvent, item:sideBarType, setSubState:Function, slideIn:boolean) {
     e.preventDefault()
     
-    setSubState((subState:boolean) => !subState)
     setCurrentObj(item.id)
-    if(slideIn && !isMobile) {
-      toggleClick((slideIn:boolean)=>!slideIn)
+    if(!subState) {
+      setSubState((subState:boolean) => !subState)
     }
-    // console.log(labelsRef.current[item.label as keyof refObj], e.target)
+    
+    
+
     let a = labelsRef.current[item.label as keyof refObj]
     let b = dropRef.current[item.label as keyof refObj]
-   
+    
+    if(slideIn && !isMobile) {
+      toggleClick((slideIn:boolean)=> !slideIn)
+    }
+    
 
     if((a.classList.contains('sudo')) || ((a.classList.contains('sudo-mobile')) && slideIn)) {
       a.classList.toggle('rrr')
     }
+    
+    for(const [k, v] of Object.entries(labelsRef.current)) {
+      if(a !== v) {
+        if(v.classList.contains('rrr')) {
+          v.classList.remove('rrr')
+          setSubState((subState:boolean) => !subState)
+        }
+
+      }
+      else {
+        if(subState) {
+          setSubState((subState:boolean) => !subState)
+        }
+      }
+    }
+
   }
 
   function giveRef(el:any, item:any, ref:any) {
@@ -74,7 +96,5 @@ function Head({slideIn, isMobile, toggleClick}:any) {
   }
   
 }
-
-// Hoisted 
 
 export default Head
