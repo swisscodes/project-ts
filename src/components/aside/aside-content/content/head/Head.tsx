@@ -29,7 +29,7 @@ function Head({slideIn, isMobile, toggleClick}:any) {
             >
 								<Link className={item.url && params?.startsWith(item.url)?'aside_svg_div-wrap activelink':'aside_svg_div-wrap'} 
                   to="#"
-                  onClick={(e) => clickedLink(e, item, setSubState, slideIn)}
+                  onClick={(e) => clickedLink(e, item)}
                 >
 								  <div className='aside_icon'>{item.icon}</div>
 								  <div className={item.subItem && !slideIn?
@@ -51,13 +51,14 @@ function Head({slideIn, isMobile, toggleClick}:any) {
   )
 
   //Hoisted
-  function clickedLink(e:React.SyntheticEvent, item:sideBarType, setSubState:Function, slideIn:boolean) {
+  function clickedLink(e:React.SyntheticEvent, item:sideBarType) {
     e.preventDefault()
     
     setCurrentObj(item.id)
-    if(!subState) {
-      setSubState((subState:boolean) => !subState)
-    }
+    // if(!subState) {
+    //   setSubState((subState:boolean) => !subState)
+    // }
+    setSubState((subState:boolean) => !subState)
     
     
 
@@ -72,6 +73,9 @@ function Head({slideIn, isMobile, toggleClick}:any) {
     if((a.classList.contains('sudo')) || ((a.classList.contains('sudo-mobile')) && slideIn)) {
       a.classList.toggle('rrr')
     }
+    else {
+      setSubState((subState:boolean) => !subState)
+    }
     
     for(const [k, v] of Object.entries(labelsRef.current)) {
       if(a !== v) {
@@ -81,11 +85,7 @@ function Head({slideIn, isMobile, toggleClick}:any) {
         }
 
       }
-      else {
-        if(subState) {
-          setSubState((subState:boolean) => !subState)
-        }
-      }
+      
     }
 
   }
