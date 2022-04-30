@@ -42,7 +42,7 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
                   </div>
 								</Link>
 								<div ref={(el) => giveRef(el, item, dropRef)}>
-                  {item.subItem && (!slideIn || isMobile) && <Sub data={item} currentObj={currentObj} subState={subState}/>}
+                  {item.subItem && (!slideIn || isMobile) && <Sub data={{...item}} currentObj={currentObj} subState={subState}/>}
                 </div>
 						</div>
           )

@@ -39,15 +39,15 @@ const sideBarData:ArrayOfSideMenu = [
         subItem: [
             {
                 id:1,
-                url:'bom',
+                url:'orders',
                 icon:'bx bx-notepad sideItems-icons',
-                label:'Bom'
+                label:'Orders'
             },
             {
                 id:2,
-                url:'steppart',
+                url:'payments',
                 icon:'bx bxs-package sideItems-icons',
-                label:'Parts'
+                label:'Payments'
             },
         ]
     },

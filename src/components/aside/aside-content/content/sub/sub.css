@@ -7,6 +7,7 @@
     background-color: rgba(77, 77, 73, .2); /* for console log */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 5px auto;
+    overflow: auto;
 }
 
 .dont_show {
@@ -17,4 +18,8 @@
     background-color: rgb(77, 77, 73);
     min-height: 150px;
     width: var(--sidebar-width);
+}
+.subitems-main {
+    display: flex;
+    flex-flow: column wrap;
 }
