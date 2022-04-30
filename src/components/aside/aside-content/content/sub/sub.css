@@ -1,0 +1,20 @@
+.show {
+    position: relative;
+    width: 90%;
+    min-height: 150px;
+    transform: translateY(0px);
+    transition: transform .5s;
+    background-color: rgba(77, 77, 73, .2); /* for console log */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 5px auto;
+}
+
+.dont_show {
+    visibility: hidden;
+    position:absolute;
+    
+    transform: translateY(-50px);
+    background-color: rgb(77, 77, 73);
+    min-height: 150px;
+    width: var(--sidebar-width);
+}

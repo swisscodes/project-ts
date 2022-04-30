@@ -18,6 +18,8 @@ function useCheckToggle(topRef:any, contentRef:any):typeUseCheckReturn {
             else if(window.innerWidth < 600){
                 setSlideIn((slideIn)=>!slideIn)
             }
+
+            
             setTimeout(() => {
                 let navImgSlide = document.querySelector(".image-logo");;
                 navImgSlide?.classList.add("image-logo-animate")

@@ -62,7 +62,7 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
     setSubState((subState:boolean) => !subState)
 
     let a = labelsRef.current[item.label as keyof refObj]
-    let b = dropRef.current[item.label as keyof refObj]
+    // let b = dropRef.current[item.label as keyof refObj]
     
     if(slideIn && !isMobile) {
       toggleClick((slideIn:boolean)=> !slideIn)
@@ -75,7 +75,7 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
       setSubState((subState:boolean) => !subState)
     }
     
-    for(const [k, v] of Object.entries(labelsRef.current)) {
+    for(const [, v] of Object.entries(labelsRef.current)) {
       if(a !== v) {
         if(v.classList.contains('rrr')) {
           v.classList.remove('rrr')
