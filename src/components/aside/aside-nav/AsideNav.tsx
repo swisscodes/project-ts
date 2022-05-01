@@ -1,14 +1,19 @@
 import './asidenav.css'
-// import goldenview from './goldenview.jpeg'
 import logo from './logo.png'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function AsideNav({slideIn, toggleClick=(f:MouseEvent)=> f}:any) {
+
+  let navigate = useNavigate();
+
   return (
     <div className='aside-nav-container'>
 			<div className={slideIn?`${'aside-nav-main-full'}`:`${'aside-nav-main'}`}>
         <div className='aside-nav-logo'>
-          <div className={slideIn?`${'image-logo-hide'}`:`${'image-logo'}`}><img src={logo} alt="" /></div>
+          <div className={slideIn?`${'image-logo-hide'}`:`${'image-logo'}`}>
+            <img src={logo} alt="" onClick={() => navigate('/') }/>
+          </div>
           <div className='aside-svg'>
             <svg className='svg-nav' onClick={(e)=>toggleClick(e)}>
             <g className='grouped-toggle-path'>

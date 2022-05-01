@@ -33,7 +33,7 @@ const sideBarData:ArrayOfSideMenu = [
     },
     {
         id:2,
-        url:'',
+        url:'analytics',
         icon:'analytics',
         label:'Analytics',
         subItem: [

@@ -9,7 +9,9 @@ function D3() {
   console.log(state)
 
   return (
-    <div>D3</div>
+    <div className='d3-container'>
+      <div className='d3-main util-15px-pad'>D3</div>
+    </div>
   )
 }
 

@@ -207,3 +207,9 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
+/* CSS UTULITY CLASSES */
+.util-15px-pad {
+  padding: 15px;
+}

@@ -43,6 +43,12 @@
     /* background-color: darkkhaki; */
 }
 
+.layout-main_content-body {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    min-height: calc(90vh - var(--navbar-height));
+}
+
 
 
 

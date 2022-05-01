@@ -22,22 +22,22 @@ function MainLayout() {
 		{loggedIn? 
     <div className='whole-wrapper'>
 
-			<div className={toggle?`${"layout_aside-nav-full"}`:'layout_aside-nav'} ref={topNavRef}>
+			<div className={toggle?`${'layout_aside-nav-full'}`:'layout_aside-nav'} ref={topNavRef}>
 				<AsideNav slideIn={toggle} toggleClick={setToggle} />
 			</div>
 
-			<div className="layout_aside-content" ref={navContentRef}>
+			<div className='layout_aside-content' ref={navContentRef}>
 				<AsideContent slideIn={toggle} isMobile={isMobile} toggleClick={setToggle} subState={subState} setSubState={setSubState}/>
 			</div>
 
-			<div className="layout-nav">
+			<div className='layout-nav'>
 				<NavBar slideIn={toggle}/>
 			</div>
 
 
-			<div className="layout-main_content">
+			<div className='layout-main_content'>
 				
-				<MainRoutes />
+				<div className='layout-main_content-body'><MainRoutes /></div>
 				<Footer />
 				
 			</div>
