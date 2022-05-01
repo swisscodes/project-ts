@@ -27,7 +27,7 @@ const sideBarData:ArrayOfSideMenu = [
         subItem: [{
             id:1,
             url:'/d3',
-            icon:'',
+            icon:'d3pie',
             label:'D3',
         }]
     },
@@ -40,7 +40,7 @@ const sideBarData:ArrayOfSideMenu = [
             {
                 id:1,
                 url:'orders',
-                icon:'bx bx-notepad sideItems-icons',
+                icon:'cart',
                 label:'Orders'
             },
             {

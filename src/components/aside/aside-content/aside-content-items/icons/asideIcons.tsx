@@ -4,23 +4,29 @@ import {ReactComponent as  Computer } from '../../aside-content-items/icons/comp
 import {ReactComponent as  Analytics } from '../../aside-content-items/icons/analytics.svg'
 import {ReactComponent as  RssFeed } from '../../aside-content-items/icons/rss-feed.svg'
 import {ReactComponent as  Atm } from '../../aside-content-items/icons/atm.svg'
-import { JsxElement } from 'typescript'
+import {ReactComponent as  D3Pie } from '../../aside-content-items/icons/d3pie.svg'
+import {ReactComponent as  Cart } from '../../aside-content-items/icons/cart.svg'
+
 //icons only end
 
-const asideIcons = {
+const asideIcons:TasideIcons = {
   project:<Project className='aside-icon'/>,
   computer:<Computer className='aside-icon'/>,
   analytics:<Analytics className='aside-icon'/>,
   rssFeed:<RssFeed className='aside-icon'/>,
   atm:<Atm className='aside-icon'/>,
+  d3pie:<D3Pie className='aside-icon'/>,
+  cart:<Cart className='aside-icon'/>,
 }
 
 export type TasideIcons = {
-	project:JsxElement,
-	computer:JsxElement,
-  analytics:JsxElement,
-  rssFeed:JsxElement,
-  atm:JsxElement,
+	project:JSX.Element,
+	computer:JSX.Element,
+  analytics:JSX.Element,
+  rssFeed:JSX.Element,
+  atm:JSX.Element,
+  d3pie:JSX.Element,
+  cart:JSX.Element,
 }
 
 

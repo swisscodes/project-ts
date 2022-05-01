@@ -19,7 +19,37 @@
     min-height: 150px;
     width: var(--sidebar-width);
 }
-.subitems-main {
+
+.aside_svg_div-wrap-sub {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    text-align: center;
+    height: 3.125em;
+}
+
+.aside_svg_div-wrap-sub:hover {
+    background-color: rgb(95, 78, 53);
+}
+
+.aside_icon-sub {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.aside_text-sub {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+/* .subitems-main {
     display: flex;
     flex-flow: column wrap;
-}
+} */

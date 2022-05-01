@@ -88,7 +88,6 @@
 
     .layout-main_content {
         grid-area: main_content;
-        background-color: var(--nav-bg-color);
     }
 }
 
