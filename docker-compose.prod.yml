@@ -10,7 +10,7 @@ services:
       - build:/app/frontend/build
     env_file:
       - ./frontend/env-docker/.prod.env
-    command: "npm run build"
+    command: "npm run build nosources-source-map"
     
   nginx:
     ports:
