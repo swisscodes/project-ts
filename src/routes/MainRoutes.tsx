@@ -9,9 +9,9 @@ function MainRoutes() {
   return (
     <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/d3' element={<D3Page />} />
-        <Route path='/orders' element={<OrdersPage />} />
-        <Route path='/payments' element={<PaymentsPage />} />
+        <Route path='/projects/d3' element={<D3Page />} />
+        <Route path='/analytics/orders' element={<OrdersPage />} />
+        <Route path='/analytics/payments' element={<PaymentsPage />} />
         <Route path='*' element={"Page not found"} />
     </Routes>
   )

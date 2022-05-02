@@ -21,12 +21,12 @@ export type ArrayOfSideMenu = Array<sideBarType>
 const sideBarData:ArrayOfSideMenu = [
     {
         id:1,
-        url:'/',
+        url:'projects',
         icon:'computer',
         label:'My Projects',
         subItem: [{
             id:1,
-            url:'/d3',
+            url:'projects/d3',
             icon:'d3pie',
             label:'D3',
         }]
@@ -39,14 +39,14 @@ const sideBarData:ArrayOfSideMenu = [
         subItem: [
             {
                 id:1,
-                url:'orders',
+                url:'analytics/orders',
                 icon:'cart',
                 label:'Orders'
             },
             {
                 id:2,
-                url:'payments',
-                icon:'bx bxs-package sideItems-icons',
+                url:'analytics/payments',
+                icon:'dollar',
                 label:'Payments'
             },
         ]

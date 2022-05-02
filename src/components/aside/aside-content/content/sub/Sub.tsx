@@ -1,6 +1,6 @@
 import './sub.css'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import {sideBarType} from '../../aside-content-items/asideData'
 import asideIcons, {TasideIcons} from '../../aside-content-items/icons/asideIcons'
 
@@ -8,16 +8,23 @@ import asideIcons, {TasideIcons} from '../../aside-content-items/icons/asideIcon
 type TsupProps = {
   data:sideBarType,
   currentObj:number|undefined,
-  subState:boolean
+  subState:boolean,
 }
 
 function Sub({data, currentObj, subState}:TsupProps) {
+
+  let location = useLocation()
+  const  params = location.pathname.match(/(?<=\/).*/)?.[0] || '/'
+
   return (
     <div className={subState && currentObj === data.id?`${'show'}`:`${'dont_show'}`}>
       {data.subItem?.map((item) => 
         (
         <div key={item.id} className='subitems-main'>
-          <Link className='aside_svg_div-wrap-sub' to={item.url} state={{...item}}>
+          <Link className={item.url && 
+            params?.startsWith(item.url)?'aside_svg_div-wrap-sub activelink-sub':'aside_svg_div-wrap-sub'} 
+            to={item.url} state={{...item}} onClick={(e)=>subLink(e, data)}
+          >
             <div className='aside_icon-sub'>{asideIcons[item.icon as keyof TasideIcons]}</div>
             <div className='aside_text-sub'>{item.label}</div>
           </Link>
@@ -28,8 +35,8 @@ function Sub({data, currentObj, subState}:TsupProps) {
   )
 
   //Hoisted
-  function subLink(e:React.SyntheticEvent) {
-    
+  function subLink(e:React.SyntheticEvent, data:sideBarType) {
+
   }
 }
 //

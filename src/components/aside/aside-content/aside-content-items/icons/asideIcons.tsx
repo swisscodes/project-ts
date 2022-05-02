@@ -6,6 +6,7 @@ import {ReactComponent as  RssFeed } from '../../aside-content-items/icons/rss-f
 import {ReactComponent as  Atm } from '../../aside-content-items/icons/atm.svg'
 import {ReactComponent as  D3Pie } from '../../aside-content-items/icons/d3pie.svg'
 import {ReactComponent as  Cart } from '../../aside-content-items/icons/cart.svg'
+import {ReactComponent as  Dollar } from '../../aside-content-items/icons/dollar.svg'
 
 //icons only end
 
@@ -17,6 +18,7 @@ const asideIcons:TasideIcons = {
   atm:<Atm className='aside-icon'/>,
   d3pie:<D3Pie className='aside-icon'/>,
   cart:<Cart className='aside-icon'/>,
+  dollar:<Dollar className='aside-icon'/>,
 }
 
 export type TasideIcons = {
@@ -27,6 +29,7 @@ export type TasideIcons = {
   atm:JSX.Element,
   d3pie:JSX.Element,
   cart:JSX.Element,
+  dollar:JSX.Element,
 }
 
 

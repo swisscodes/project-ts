@@ -32,6 +32,10 @@
     background-color: rgb(95, 78, 53);
 }
 
+.activelink-sub {
+    background-color: rgba(114, 93, 61, 0.5);
+}
+
 .aside_icon-sub {
     display: inline-flex;
     justify-content: center;

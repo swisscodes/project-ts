@@ -16,13 +16,17 @@ type refObj = {
 
 function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
   
-  // const [subState, setSubState] = useState<boolean>(false)
   const [currentObj, setCurrentObj] = useState<number>()
+  // const [paramsClicked, setParamsClicked] = useState<string>()
 
   const labelsRef = useRef<refObj>({})
   const dropRef = useRef<refObj>({})
   const location = useLocation()
-  var params = location.pathname.match(/(?<=\/).*/)?.[0] || '/'
+  const  params = location.pathname.match(/(?<=\/).*/)?.[0] || '/'
+  // if( paramsClicked) {
+  //   params = paramsClicked
+  // }
+
 
   return (
     <div className='aside_icons-container'>
@@ -46,7 +50,9 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
                 </div>
               </Link>
               <div ref={(el) => giveRef(el, item, dropRef)}>
-                {item.subItem && (!slideIn || isMobile) && <Sub data={{...item}} currentObj={currentObj} subState={subState}/>}
+                {item.subItem && (!slideIn || isMobile) && (
+                  <Sub data={{...item}} currentObj={currentObj} subState={subState} />)
+                }
               </div>
 						</div>
           )
@@ -58,6 +64,7 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
   //Hoisted
   function clickedLink(e:React.SyntheticEvent, item:sideBarType) {
     e.preventDefault()
+
     
     setCurrentObj(item.id)
     // if(!subState) {
