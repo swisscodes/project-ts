@@ -1,17 +1,23 @@
 import './sub.css'
-import React from 'react'
+import React, { MutableRefObject } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {sideBarType} from '../../aside-content-items/asideData'
 import asideIcons, {TasideIcons} from '../../aside-content-items/icons/asideIcons'
+import {TrefObj} from '../head/Head'
 
 
 type TsupProps = {
+  slideIn:boolean,
   data:sideBarType,
   currentObj:number|undefined,
   subState:boolean,
+  currentRef:MutableRefObject<TrefObj>|undefined
+  setSubState:Function
+  isMobile:boolean
+  toggleClick:Function
 }
 
-function Sub({data, currentObj, subState}:TsupProps) {
+function Sub({slideIn, data, currentObj, subState, currentRef, setSubState, isMobile, toggleClick}:TsupProps) {
 
   let location = useLocation()
   const  params = location.pathname.match(/(?<=\/).*/)?.[0] || '/'
@@ -36,7 +42,15 @@ function Sub({data, currentObj, subState}:TsupProps) {
 
   //Hoisted
   function subLink(e:React.SyntheticEvent, data:sideBarType) {
+    console.log(currentRef)
+    let a = currentRef?.current[data.label as keyof TrefObj]
+    console.log(a)
+    a.classList.toggle('rrr')
+    setSubState((subState:boolean)=> !subState)
+    isMobile && toggleClick((slideIn:boolean)=> !slideIn)
+    
 
+   
   }
 }
 //

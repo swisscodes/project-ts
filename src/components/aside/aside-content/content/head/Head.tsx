@@ -1,6 +1,6 @@
 import './head.css'
 
-import {useState} from 'react'
+import {MutableRefObject, useState} from 'react'
 import { useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import sideBarData from '../../aside-content-items/asideData'
@@ -10,17 +10,18 @@ import asideIcons, {TasideIcons} from '../../aside-content-items/icons/asideIcon
 
 
 
-type refObj = {
+export type TrefObj = {
   label?:any
 }
 
 function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
   
   const [currentObj, setCurrentObj] = useState<number>()
+  const [currentRef, setCurrentRef] = useState<MutableRefObject<TrefObj>>()
   // const [paramsClicked, setParamsClicked] = useState<string>()
 
-  const labelsRef = useRef<refObj>({})
-  const dropRef = useRef<refObj>({})
+  const labelsRef = useRef<TrefObj>({})
+  const dropRef = useRef<TrefObj>({})
   const location = useLocation()
   const  params = location.pathname.match(/(?<=\/).*/)?.[0] || '/'
   // if( paramsClicked) {
@@ -51,7 +52,7 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
               </Link>
               <div ref={(el) => giveRef(el, item, dropRef)}>
                 {item.subItem && (!slideIn || isMobile) && (
-                  <Sub data={{...item}} currentObj={currentObj} subState={subState} />)
+                  <Sub data={{...item}} slideIn={slideIn} currentObj={currentObj} subState={subState} setSubState={setSubState} currentRef={currentRef} isMobile={isMobile} toggleClick={toggleClick}/>)
                 }
               </div>
 						</div>
@@ -72,7 +73,8 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
     // }
     setSubState((subState:boolean) => !subState)
 
-    let a = labelsRef.current[item.label as keyof refObj]
+    let a = labelsRef.current[item.label as keyof TrefObj]
+    setCurrentRef(labelsRef)
     // let b = dropRef.current[item.label as keyof refObj]
     
     if(slideIn && !isMobile) {
@@ -84,6 +86,9 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
     }
     else {
       setSubState((subState:boolean) => !subState)
+      if(isMobile) {
+        toggleClick((slideIn:boolean)=> !slideIn)
+      }
     }
     
     for(const [, v] of Object.entries(labelsRef.current)) {
