@@ -213,3 +213,20 @@ img {
 .util-15px-pad {
   padding: 15px;
 }
+
+
+/** SVG utility classes **/
+.svg-main {
+  width: 410px;
+  height: 110px;
+}
+
+.svgselection {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+} 

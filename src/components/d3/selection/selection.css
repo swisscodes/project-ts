@@ -1,3 +1,60 @@
 .d3_select-main {
     background-color: bisque;
 }
+
+.svg-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.select-h1 {
+    display: flex;
+    justify-content: center;
+}
+.select-btn-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.select-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.select-btn-group button {
+    width: 100px;
+    border: solid grey 1px;
+    border-radius: 10px;
+    background-color: white;
+    color: grey;
+    padding: 10px 0;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    outline: none;
+    appearance: unset;
+   
+}
+
+/* .select-btn-group button:focus {
+    transform: scale(.90);
+    background-color: aquamarine;
+} */
+
+
+.svgselection circle, rect {
+    fill:rgba(248, 248, 248, 0.3);
+}
+
+.select-output {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .select-btn-group {
+        grid-template-columns: 1fr 1fr;
+    }
+} 

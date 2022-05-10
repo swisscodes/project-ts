@@ -3,11 +3,11 @@ import {useEffect} from 'react';
 
 
 
-export const useD3Ref = (renderChartFn:Function, dependencies:[]) => {
+export const useD3Ref = (renderChartFn:Function, dependenciesData:[]) => {
 
 
     useEffect(() => {
         renderChartFn();
         return () => {};
-      }, [dependencies, renderChartFn,]);
+      }, [dependenciesData, renderChartFn,]);
 }
