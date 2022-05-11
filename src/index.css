@@ -153,10 +153,10 @@
 html {
     box-sizing: border-box;
   }
-  
+
 body {
   font-family: 'Roboto Slab', Ubuntu, Serif, Sans-serif;
-} 
+}
 
 
 
@@ -193,7 +193,7 @@ img {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
@@ -210,23 +210,18 @@ img {
 
 
 /* CSS UTULITY CLASSES */
-.util-15px-pad {
-  padding: 15px;
-}
+  .util-15px-pad {
+    padding: 15px;
+  }
 
 
 /** SVG utility classes **/
-.svg-main {
+/* .svg-main {
   width: 410px;
   height: 110px;
-}
-
-.svgselection {
-  width: 100%;
-  height: 100%;
-}
+} */
 
 
 @media only screen and (max-width: 600px) {
 
-} 
+}

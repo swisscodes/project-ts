@@ -39,17 +39,17 @@ function Selection() {
   const data:[] = []
   const dimemsion = [{}]
   const square1Dimemsion:TsquareDimemsion = {
-    first:{x:10,y:5,width:90, height:90},
-    second:{x:110,y:5,width:90, height:90},
-    third:{x:210,y:5,width:90, height:90},
-    fourth:{x:310,y:5,width:90, height:90}
-  }
+    first:{x:10,y:10,width:90, height:90},
+    second:{x:110,y:10,width:90, height:90},
+    third:{x:210,y:10,width:90, height:90},
+    fourth:{x:310,y:10,width:90, height:90}
+  }// the viewport is 410 so = 90*4 + 10*4 and the rest of the 5 was emtpy used like padding
 
   const square2Dimemsion:TsquareDimemsion = {
-    first:{x:5,y:0,width:400, height:20},
-    second:{x:5,y:25,width:400, height:20},
-    third:{x:5,y:50,width:400, height:20},
-    fourth:{x:5,y:75,width:400, height:20}
+    first:{x:5,y:7.5,width:400, height:20},
+    second:{x:5,y:32.5,width:400, height:20},
+    third:{x:5,y:57.5,width:400, height:20},
+    fourth:{x:5,y:82.5,width:400, height:20}
   }
 
   const svgRefCircle = useRef(null);
@@ -77,20 +77,23 @@ function Selection() {
         </div>
 
         <div className='svg-wrapper'>
-          <div className='svg-main'>
-            <svg ref={svgRefCircle} className='svgselection'>
-            </svg>
-          </div>
+            
+            <div className='svgselection-wrap'>
+              <svg ref={svgRefCircle} className='svgselection' viewBox='0 0 410 110'>
+              </svg>
+            </div>
+          
+            <div className='svgselection-wrap'>
+              <svg ref={svgRefSquare1} className='svgselection' viewBox='0 0 410 110'>
+              </svg>
+            </div>
+         
 
-          <div className='svg-main'>
-            <svg ref={svgRefSquare1} className='svgselection'>
-            </svg>
-          </div>
-
-          <div className='svg-main'>
-            <svg ref={svgRefSquare2} className='svgselection'>
-            </svg>
-          </div>
+            <div className='svgselection-wrap'>
+              <svg ref={svgRefSquare2} className='svgselection' viewBox='0 0 410 110'>
+              </svg>
+            </div>
+          
 
         </div>
 
