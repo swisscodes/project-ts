@@ -3,6 +3,8 @@ import React, {SyntheticEvent, useRef, useState} from 'react'
 import selectionCircle from './selectionCircle'
 import selectionSquare from './selectionSquare'
 import {useD3Ref} from '../../utils/useD3Ref'
+import { selectedElement } from './tools/d3SelectFunc'
+
 
 
 export type TsquareDimemsion = {
@@ -61,6 +63,8 @@ function Selection() {
   const renderSquare2 = () => selectionSquare(svgRefSquare2, data, square2Dimemsion)
   
 
+  
+
   useD3Ref(renderCircle, data)
   useD3Ref(renderSquare1, data)
   useD3Ref(renderSquare2, data)
@@ -79,18 +83,18 @@ function Selection() {
         <div className='svg-wrapper'>
             
             <div className='svgselection-wrap'>
-              <svg ref={svgRefCircle} className='svgselection' viewBox='0 0 410 110'>
+              <svg ref={svgRefCircle} className='svgselection circles' viewBox='0 0 410 110'>
               </svg>
             </div>
           
             <div className='svgselection-wrap'>
-              <svg ref={svgRefSquare1} className='svgselection' viewBox='0 0 410 110'>
+              <svg ref={svgRefSquare1} className='svgselection squares' viewBox='0 0 410 110'>
               </svg>
             </div>
          
 
             <div className='svgselection-wrap'>
-              <svg ref={svgRefSquare2} className='svgselection' viewBox='0 0 410 110'>
+              <svg ref={svgRefSquare2} className='svgselection rectangles' viewBox='0 0 410 110'>
               </svg>
             </div>
           
@@ -107,9 +111,11 @@ function Selection() {
   //
   function buttonClicked(e:SyntheticEvent) {
     const target = e.target as HTMLButtonElement
-    let value = target.value
+    let bottonValue = target.value
 
-    setButtonPressed(() => value )
+    setButtonPressed(() => bottonValue )
+    selectedElement({circles:svgRefCircle, squares:svgRefSquare1, rectangles:svgRefSquare2},bottonValue)
+
   }
 }
 
