@@ -102,7 +102,7 @@ function Selection() {
         </div>
 
         <div className='select-output'>
-          <h3>{buttonPressed && <p>Pressed Butoon: {buttonPressed}</p>}</h3>
+          <h3>{buttonPressed && <p>Pressed Button: {buttonPressed}</p>}</h3>
         </div>
       </div>
     </div>
