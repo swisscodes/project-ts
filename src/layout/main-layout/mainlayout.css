@@ -14,7 +14,9 @@
     color: whitesmoke;
     background-color: var(--nav-bg-color);
     transition: all .3s ease-in-out;
+    z-index: 1000;
 }
+
 .layout_aside-nav-full {
     grid-area: aside-top;
     width: var(--sidebar-width-cut);
@@ -22,10 +24,12 @@
     color: whitesmoke;
     background-color: var(--nav-bg-color);
     transition: all .3s ease-in-out;
+    z-index: 1000;
 }
 
 .layout_aside-content {
     grid-area: aside-content;
+    z-index: 1000;
 }
 
 
@@ -33,6 +37,7 @@
     grid-area: nav;
     color: whitesmoke;
     background-color: var(--nav-bg-color);
+    z-index: 1000;
     /* commented out because we used the transition delay
     to stop the background color from going small to big */
     

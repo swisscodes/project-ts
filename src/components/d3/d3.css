@@ -19,7 +19,9 @@
     height: 300px;
     cursor: pointer;
     perspective: 1000px;
+    color: red;
 }
+
 .project-card img {
     height: 100%;
     padding: 10px 15px;

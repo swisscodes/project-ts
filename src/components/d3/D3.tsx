@@ -21,8 +21,7 @@ function D3() {
                   <Link to='selection'><img src={capture} alt=""/></Link>
                 </div>
                 <div className="project-card-inner-back">
-                  <Link to='selection'><img src={capture1} alt=""/>
-                </Link></div>
+                  <Link to='selection'><img src={capture1} alt=""/></Link></div>
               </div>
             </div>
           </div>
