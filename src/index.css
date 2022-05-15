@@ -214,6 +214,10 @@ img {
     padding: 15px;
   }
 
+  .full-height {
+    min-height: calc(90vh - var(--navbar-height));
+  }
+
 
 /** SVG utility classes **/
 /* .svg-main {
