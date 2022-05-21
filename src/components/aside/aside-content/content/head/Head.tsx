@@ -73,7 +73,7 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
     // }
     setSubState((subState:boolean) => !subState)
 
-    let a = labelsRef.current[item.label as keyof TrefObj]
+    let getIcon = labelsRef.current[item.label as keyof TrefObj]
     setCurrentRef(labelsRef)
     // let b = dropRef.current[item.label as keyof refObj]
     
@@ -81,8 +81,8 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
       toggleClick((slideIn:boolean)=> !slideIn)
     }
 
-    if((a.classList.contains('sudo')) || ((a.classList.contains('sudo-mobile')) && slideIn)) {
-      a.classList.toggle('rrr')
+    if((getIcon.classList.contains('sudo')) || ((getIcon.classList.contains('sudo-mobile')) && slideIn)) {
+      getIcon.classList.toggle('folder-indicator')
     }
     else {
       setSubState((subState:boolean) => !subState)
@@ -92,9 +92,9 @@ function Head({slideIn, isMobile, toggleClick, subState, setSubState}:any) {
     }
     
     for(const [, v] of Object.entries(labelsRef.current)) {
-      if(a !== v) {
-        if(v.classList.contains('rrr')) {
-          v.classList.remove('rrr')
+      if(getIcon !== v) {
+        if(v.classList.contains('folder-indicator')) {
+          v.classList.remove('folder-indicator')
           setSubState((subState:boolean) => !subState)
         }
 

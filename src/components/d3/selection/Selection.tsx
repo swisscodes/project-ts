@@ -37,6 +37,7 @@ export type TsquareDimemsion = {
 function Selection() {
 
   const [buttonPressed, setButtonPressed] = useState<string | null>(null)
+  const [selectValue, setSelectValue] = useState<string | null>(null)
 
   const data:[] = []
   const dimemsion = [{}]
@@ -74,10 +75,10 @@ function Selection() {
       <div className='d3_select-main util-15px-pad'>
         <div className='select-h1'><h1>Coloring Elements</h1></div>
         <div className='select-btn-group'>
-          <div className='select-btns'><button type='submit' value='select' onClick={(e)=> buttonClicked(e)}>select</button></div>
-          <div className='select-btns'><button type='submit' value='select-all' onClick={(e)=> buttonClicked(e)}>select all</button></div>
-          <div className='select-btns'><button type='submit' value='filter-odd' onClick={(e)=> buttonClicked(e)}>filter odd</button></div>
-          <div className='select-btns'><button type='submit' value='filter-even' onClick={(e)=> buttonClicked(e)}>filter even</button></div>
+          <div className='select-btns'><button className={`s-btns ${buttonPressed==='select' && 's-btn-active'}`} type='submit' value='select' onClick={(e)=> buttonClicked(e)}>select</button></div>
+          <div className='select-btns'><button className={`s-btns ${buttonPressed==='select-all' && 's-btn-active'}`} type='submit' value='select-all' onClick={(e)=> buttonClicked(e)}>select all</button></div>
+          <div className='select-btns'><button className={`s-btns ${buttonPressed==='filter-odd' && 's-btn-active'}`} type='submit' value='filter-odd' onClick={(e)=> buttonClicked(e)}>filter odd</button></div>
+          <div className='select-btns'><button className={`s-btns ${buttonPressed==='filter-even' && 's-btn-active'}`} type='submit' value='filter-even' onClick={(e)=> buttonClicked(e)}>filter even</button></div>
         </div>
 
         <div className='svg-wrapper'>
@@ -117,6 +118,7 @@ function Selection() {
     selectedElement({circles:svgRefCircle, squares:svgRefSquare1, rectangles:svgRefSquare2},bottonValue)
 
   }
+
 }
 
 export default Selection

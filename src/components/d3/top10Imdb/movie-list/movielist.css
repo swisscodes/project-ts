@@ -1,0 +1,38 @@
+.movie-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    height: fit-content;
+    max-height: 30vh;
+    overflow: auto;
+}
+
+.m-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(165, 148, 148);
+    min-height: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.m-list-item:hover {
+    background-color: rgb(119, 119, 179);
+    color: wheat;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .movie-list {
+        padding: 0 5px;
+    }
+
+    .m-list-item {
+    }
+    .check-box-group {
+        gap: 5px;
+    }
+}

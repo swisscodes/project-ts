@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useState } from 'react';
+import { RefObject} from 'react';
 import {select, selectAll} from 'd3'
 
 
@@ -39,7 +39,7 @@ function selectedElement(refObjects:IrefObjects, bottonValue:string,) {
 
     for(const currentEl of elements) {
         
-        currentEl.filter(function(d, i, n):any {
+        currentEl.filter(function(d, i, n):boolean {
             if(bottonValue==='filter-odd') {
                 if(i % 2 === 0) {
                     select(this).style('fill',`rgba(${red}, ${green}, ${blue}, ${(i+1) * 0.25}`)
@@ -58,6 +58,7 @@ function selectedElement(refObjects:IrefObjects, bottonValue:string,) {
             else {
                 select(this).style('fill',`rgba(${red}, ${green}, ${blue}, ${(i+1) * 0.50}`)
             }
+            return true //we use this because type is boolean and we must return something.
            
         }) 
     }

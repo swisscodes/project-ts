@@ -63,7 +63,7 @@
     transform: rotate(-180deg);
 } */
 
-.rrr::after{
+.folder-indicator::after{
     
         content: '\25B2';
         position: absolute;
@@ -101,7 +101,7 @@
         transform: rotate(-90deg);
     }
 
-    .rrr::after{
+    .folder-indicator::after{
     
         content: '\25B2';
         position: absolute;

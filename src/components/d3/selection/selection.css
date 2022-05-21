@@ -21,7 +21,9 @@
     justify-content: center;
 }
 
-.select-btn-group button {
+
+
+.s-btns {
     width: 100px;
     border: solid grey 1px;
     border-radius: 10px;
@@ -34,6 +36,13 @@
     outline: none;
     appearance: unset;
    
+}
+
+.s-btn-active {
+    background-color: rgb(58, 223, 121);
+    color: black;
+    border: solid rgb(46, 43, 43) 1px;
+    transition: all .4s;
 }
 
 /* .select-btn-group button:focus {

@@ -45,7 +45,7 @@ function Sub({slideIn, data, currentObj, subState, currentRef, setSubState, isMo
     console.log(currentRef)
     let a = currentRef?.current[data.label as keyof TrefObj]
     console.log(a)
-    a.classList.toggle('rrr')
+    a.classList.toggle('folder-indicator')
     setSubState((subState:boolean)=> !subState)
     isMobile && toggleClick((slideIn:boolean)=> !slideIn)
     
