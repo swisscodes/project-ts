@@ -1,4 +1,6 @@
-import React, { SyntheticEvent } from 'react'
+import { stringify } from 'querystring'
+import React, { useState, SyntheticEvent } from 'react'
+import { TmovieDataArray } from './imdbData'
 import './onoffcheck.css'
 
 type TOnOffCheckProps = {
@@ -6,20 +8,21 @@ type TOnOffCheckProps = {
     labelFor:string,
 		className:string
     contentText:string,
+    movieData:TmovieDataArray,
+    checkClicked:Function,
 }
 
-function OnOffCheck({id, labelFor, contentText, className }:TOnOffCheckProps) {
+function OnOffCheck({id, labelFor, contentText, className, movieData, checkClicked }:TOnOffCheckProps) {
+
   return (
     <>
-      <input type="checkbox" id={id} className={className}/>
-			<label htmlFor={labelFor} onClick={(e) => checkClicked(e)}>{contentText}</label>
+      <input type="checkbox" id={id} className={className} name={labelFor} onChange={(e) => checkClicked(e)}/>
+			<label htmlFor={labelFor}>{contentText}</label>
 		</>
   )
 
   //
-  function checkClicked(e:any): void {
-    console.log(e.target.htmlFor)
-  }
+  
 }
 
 export default OnOffCheck

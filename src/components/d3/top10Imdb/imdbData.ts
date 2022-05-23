@@ -1,7 +1,18 @@
-export const movieData = [
+export type TmovieData = {
+  name:string,
+  contentRating:string,
+  duration:number,
+  starRating:number,
+  votes:number,
+  gross:number
+}
+
+export type TmovieDataArray = TmovieData[]
+
+export const movieData:TmovieDataArray = [
   {
     name: 'Avengers: Endgame',
-    contentRating: '12A',
+    contentRating: '12a-rated',
     duration: 181, // in minutes
     starRating: 8.4, // out of 10
     votes: 747374,
@@ -9,7 +20,7 @@ export const movieData = [
   },
   {
     name: 'The Lion King',
-    contentRating: 'PG',
+    contentRating: 'pg-rated',
     duration: 118,
     starRating: 6.9,
     votes: 198014,
@@ -17,7 +28,7 @@ export const movieData = [
   },
   {
     name: 'Star Wars: The Rise of Skywalker',
-    contentRating: '12A',
+    contentRating: '12a-rated',
     duration: 141,
     starRating: 6.6,
     votes: 343828,
@@ -25,7 +36,7 @@ export const movieData = [
   },
   {
     name: 'Frozen 2',
-    contentRating: 'U',
+    contentRating: 'u-rated',
     duration: 103,
     starRating: 6.9,
     votes: 120859,
@@ -33,7 +44,7 @@ export const movieData = [
   },
   {
     name: 'Toy Story 4',
-    contentRating: 'U',
+    contentRating: 'u-rated',
     duration: 100,
     starRating: 7.8,
     votes: 187391,
@@ -41,7 +52,7 @@ export const movieData = [
   },
   {
     name: 'Captain Marvel',
-    contentRating: '12A',
+    contentRating: '12a-rated',
     duration: 123,
     starRating: 6.9,
     votes: 420459,
@@ -49,7 +60,7 @@ export const movieData = [
   },
   {
     name: 'Spider-Man: Far From Home',
-    contentRating: '12A',
+    contentRating: '12a-rated',
     duration: 129,
     starRating: 7.5,
     votes: 301963,
@@ -57,7 +68,7 @@ export const movieData = [
   },
   {
     name: 'Aladdin',
-    contentRating: 'PG',
+    contentRating: 'pg-rated',
     duration: 128,
     starRating: 7.0,
     votes: 213479,
@@ -65,7 +76,7 @@ export const movieData = [
   },
   {
     name: 'Joker',
-    contentRating: '15',
+    contentRating: '15-rated',
     duration: 122,
     starRating: 8.5,
     votes: 840556,
@@ -73,7 +84,7 @@ export const movieData = [
   },
   {
     name: 'Jumanji: The Next Level',
-    contentRating: '12A',
+    contentRating: '12a-rated',
     duration: 123,
     starRating: 6.7,
     votes: 163288,

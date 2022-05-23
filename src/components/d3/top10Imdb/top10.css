@@ -13,19 +13,20 @@
     margin-bottom: 0.9375em;
 }
 
-.head-content h1, p {
+.head-content h1 {
     text-align: center;
-    color: #005ccb;
 }
 
 .head-content h1 {
     margin-bottom: 5px;
+    color: #005ccb;
 }
 
 .head-content p {
     width: 200px;
     margin: auto;
     font-weight: 600;
+    text-align: center;
     color: #415770;
 }
 
@@ -51,7 +52,33 @@
 .movie-post {
     margin-left: 10px;
     background-color: rgb(165, 148, 148);
+    overflow: auto;
 }
+
+.movie-post h2 {
+    margin-bottom: 5px;
+    color: #005ccb;
+    text-align: center;
+}
+
+.movie-post p {
+    padding: 0 0 0 20px;
+    font-size: 1.2em;
+    font-weight: 400;
+    white-space: nowrap;
+}
+.movie-post p span {
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #005ccb;
+}
+
+#m-selected {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 
 
 @media only screen and (max-width: 600px) {
@@ -87,7 +114,21 @@
         height: 250px;
         
     }
+    /**/
+    .movie-post::-webkit-scrollbar {
+        visibility: hidden;
+    }
+
+    .movie-post::-webkit-scrollbar-thumb {
+        visibility: hidden;
+    }
+
+    .movie-post::-webkit-scrollbar-track {
+        visibility: hidden;
+    }
 }
+
+
 
 
 /* other stuffs */
@@ -100,16 +141,31 @@
 .movie-list::-webkit-scrollbar-track {
     box-shadow: inset 0 0 2px grey;
     border-radius: 5px;
-  }
+}
   
   /* Handle */
-  .movie-list::-webkit-scrollbar-thumb {
+.movie-list::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 5px;
-  }
+}
   
   /* Handle on hover */
-  .movie-list::-webkit-scrollbar-thumb:hover {
+.movie-list::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
-  
+}
+
+/**/
+.movie-post::-webkit-scrollbar {
+    height: 7px;
+    background-color: white;
+}
+
+.movie-post::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.movie-post::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey;
+    border-radius: 5px;
+}
