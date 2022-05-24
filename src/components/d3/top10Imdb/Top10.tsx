@@ -32,6 +32,7 @@ function Top10() {
   const pLengendRefs = useRef<Trefs>({})
   const svgrectRef1 = useRef(null)
   const svgrectRef2 = useRef(null)
+  const svgrectRef3 = useRef(null)
 
 
 
@@ -67,6 +68,11 @@ function Top10() {
   useEffect(()=> {
     select(svgrectRef1.current).selectAll('rect').remove()
     select(svgrectRef1.current).selectAll('text').remove()
+    select(svgrectRef2.current).selectAll('rect').remove()
+    select(svgrectRef2.current).selectAll('text').remove()
+    select(svgrectRef3.current).selectAll('circle').remove()
+    select(svgrectRef3.current).selectAll('text').remove()
+    let cxValue=0, xValue = 0
     for(let i=0; i<moviesArr.length; i++) {
       select(svgrectRef1.current)
         .append('rect')
@@ -82,28 +88,55 @@ function Top10() {
         .attr('x', `${moviesArr[i].gross/2 + 5}`)
         .attr('y', (i*25) + 40)
         .style('font-size', '16')
+        .style('font-weight', '600')
         .style('fill', 'rgb(63,63,63')
-    }
-
-    select(svgrectRef2.current).selectAll('rect').remove()
-    select(svgrectRef2.current).selectAll('text').remove()
-    for(let i=0; i<moviesArr.length; i++) {
+        
       select(svgrectRef2.current)
-        .append('rect')
-        .attr('width', `${moviesArr[i].duration}`)
-        .attr('height', '20px')
-        .attr('x', 0)
-        .attr('y', (i*25) + 25)
+          .append('rect')
+          .attr('width', `${moviesArr[i].duration}`)
+          .attr('height', '20px')
+          .attr('x', 0)
+          .attr('y', (i*25) + 25)
+          .style('fill', `${moviesArr[i].color}`)
+    
+      select(svgrectRef2.current)
+          .append('text')
+          .text(`${moviesArr[i].duration}`)
+          .attr('x', `${moviesArr[i].duration + 5}`)
+          .attr('y', (i*25) + 40)
+          .style('font-size', '16')
+          .style('font-weight', '600')
+          .style('fill', 'rgb(63,63,63')
+
+      //votes circle
+
+      
+      select(svgrectRef3.current)
+        .append('circle')
+        .attr('r', `${moviesArr[i].votes / 20000} `)
+        .attr('cx', function() {
+          cxValue = cxValue + (moviesArr[i].votes / 20000 )+60;
+          return cxValue
+        })
+        .attr('cy', '150px')
         .style('fill', `${moviesArr[i].color}`)
-
-      select(svgrectRef2.current)
+      select(svgrectRef3.current)
         .append('text')
-        .text(`${moviesArr[i].duration}`)
-        .attr('x', `${moviesArr[i].duration + 5}`)
-        .attr('y', (i*25) + 40)
+        .text(`${moviesArr[i].votes}`)
+        .attr('text-anchor', 'middle')
+        .attr('x', function() {
+          xValue = xValue + (moviesArr[i].votes / 20000 )+60;
+          return xValue
+        })
+        .attr('y', `${150 - (moviesArr[i].votes / 20000) - 10}`)
         .style('font-size', '16')
+        .style('font-weight', 600)
         .style('fill', 'rgb(63,63,63')
+
+
+    
     }
+
   
   }, [moviesArr])
 
@@ -191,20 +224,24 @@ function Top10() {
             <p ref={(el) => giveRef(el, '12a-rated', pLengendRefs)}></p>
             <p ref={(el) => giveRef(el, 'pg-rated', pLengendRefs)}></p> */}
           </div>
-          <div id="m-gross">
-            <div>
+          <div id="m-gross-dura">
+            <div id="m-gross">
               {moviesArr.length>0 && <p>Gross collection in USD Million</p>}
               <svg ref={svgrectRef1} className="m-gross-svg" viewBox='0 0 500 270'>
               </svg>
             </div>
-            <div>
+            <div id="m-duration">
               {moviesArr.length>0 && <p>Duration in Minutes</p>}
               <svg ref={svgrectRef2} className="m-gross-svg" viewBox='0 0 500 270'>
               </svg>
             </div>
           </div>
-          <div id="m-duration"></div>
-          <div id="m-votes"></div>
+          
+          <div id="m-votes">
+          {moviesArr.length>0 && <p>Numbers of Votes</p>}
+            <svg ref={svgrectRef3} className="m-svg-votes" viewBox='0 0 810 200'>
+            </svg>
+          </div>
         </div>
 			</div>
     </div>

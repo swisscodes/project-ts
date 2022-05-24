@@ -83,6 +83,12 @@
     justify-content: center;
     flex-flow: column;
     align-items: center;
+    max-width: 100px;
+    text-align: center;
+}
+
+.m-selected-items h2 {
+    color: #005ccb;
 }
 
 #m-legend {
@@ -107,20 +113,24 @@
     text-align: center;
 }
 
-#m-gross {
+#m-gross-dura {
     display: flex;
     
 }
 
-#m-gross div {
+#m-gross-dura div {
     width: 100%;
     height: 100%;
 }
-#m-gross div p {
+#m-gross-dura div p {
     text-align: center;
 }
 .m-gross-svg {
     max-width: 500px;
+}
+
+.m-svg-votes {
+    max-width: 600px;
 }
 
 
@@ -163,7 +173,7 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    #m-gross {
+    #m-gross-dura {
         flex-flow: column
         
     }
