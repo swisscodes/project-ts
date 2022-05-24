@@ -4,7 +4,8 @@ export type TmovieData = {
   duration:number,
   starRating:number,
   votes:number,
-  gross:number
+  gross:number,
+  color?:string,
 }
 
 export type TmovieDataArray = TmovieData[]
