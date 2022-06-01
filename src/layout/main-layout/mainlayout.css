@@ -29,7 +29,7 @@
 
 .layout_aside-content {
     grid-area: aside-content;
-    z-index: 1000;
+    z-index: 999;
 }
 
 

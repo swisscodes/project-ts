@@ -4,8 +4,21 @@
 
 
 .content-wrap {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     min-height: calc(90vh - var(--navbar-height));
-    background-color: darkkhaki;
+    background-color: rgb(248, 247, 239);
+}
+
+.side-a img{
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .side-a img {
+        height: 70vh;
+        object-fit:cover;
+    }
+
 }

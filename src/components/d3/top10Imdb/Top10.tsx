@@ -109,7 +109,7 @@ function Top10() {
           .style('fill', 'rgb(63,63,63')
 
       //votes circle
-
+      
       
       select(svgrectRef3.current)
         .append('circle')
@@ -118,7 +118,7 @@ function Top10() {
           cxValue = cxValue + (moviesArr[i].votes / 20000 )+60;
           return cxValue
         })
-        .attr('cy', '150px')
+        .attr('cy', '80px')
         .style('fill', `${moviesArr[i].color}`)
       select(svgrectRef3.current)
         .append('text')
@@ -128,7 +128,7 @@ function Top10() {
           xValue = xValue + (moviesArr[i].votes / 20000 )+60;
           return xValue
         })
-        .attr('y', `${150 - (moviesArr[i].votes / 20000) - 10}`)
+        .attr('y', `${80 - (moviesArr[i].votes / 20000) - 10}`)
         .style('font-size', '16')
         .style('font-weight', 600)
         .style('fill', 'rgb(63,63,63')
@@ -239,7 +239,7 @@ function Top10() {
           
           <div id="m-votes">
           {moviesArr.length>0 && <p>Numbers of Votes</p>}
-            <svg ref={svgrectRef3} className="m-svg-votes" viewBox='0 0 810 200'>
+            <svg ref={svgrectRef3} className="m-svg-votes" viewBox='0 0 820 200'>
             </svg>
           </div>
         </div>

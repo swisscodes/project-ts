@@ -62,7 +62,7 @@
     max-height: 110px;
 }
 
-.svgselection circle, rect {
+.svgselection circle, .svgselection rect {
     fill:rgba(248, 248, 248, 0.5);
 }
 

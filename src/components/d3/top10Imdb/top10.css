@@ -129,8 +129,13 @@
     max-width: 500px;
 }
 
+#m-votes {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .m-svg-votes {
-    max-width: 600px;
+    max-width: 800px;
 }
 
 
