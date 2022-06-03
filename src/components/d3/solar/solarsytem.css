@@ -1,0 +1,67 @@
+.solar-main {
+    margin-bottom: 0.9375em;
+}
+
+.solar-main h1 {
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+    color: rgb(226, 61, 94);
+    margin-bottom: 5px;
+}
+
+.solar-p-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.solar-p-wrap p {
+    width: 300px;
+    color: rgba(236, 143, 20, 1);
+    font-weight: 500;
+    text-align: center;
+}
+
+.solar-btn-msg {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.solar-btn-msg button {
+    padding: 8px;
+    background-color: white;
+    border: 1px solid rgba(236, 143, 20, 1);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.solar-btn-msg button:hover {
+    color: white;
+    background-color: rgba(236, 143, 20, 1);
+}
+
+.solar-diameter svg, .solar-density svg {
+    margin-top: 30px;
+    max-width: 1366px;
+    max-height: 350px;
+
+}
+.solar-diameter p, .solar-density p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.solar-diameter text, .solar-density text {
+    text-anchor: middle;
+    font-weight:500;
+}
+
+@media only screen and (max-width: 600px) {
+    .solar-main h1 {
+        font-size: 50px;
+        line-height: 1.2;
+    }
+}

@@ -7,6 +7,7 @@ import SelectionPage from 'pages/d3Pages/SelectionPage';
 import OrdersPage from 'pages/OrdersPage';
 import PaymentsPage from 'pages/PaymentsPage';
 import Top10Page from 'pages/d3Pages/Top10Page';
+import SolarSystemPage from 'pages/d3Pages/SolarSystemPage';
 
 function MainRoutes() {
   return (
@@ -18,6 +19,7 @@ function MainRoutes() {
           <Route path='projects/d3' element={<D3Page />} />
             <Route path='projects/d3/selection' element={<SelectionPage />} />
             <Route path='projects/d3/top-10' element={<Top10Page />} />
+            <Route path='projects/d3/solar-system' element={<SolarSystemPage />} />
           {/** End D3 Routes */}
         {/** End of Projects Routes */}
         <Route path='/analytics/orders' element={<OrdersPage />} />
