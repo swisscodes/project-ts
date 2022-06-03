@@ -123,7 +123,7 @@ function SolarSystem() {
 
 				<div className="solar-diameter">
 					<p>Diameter of the planets in kilometer, sorted in {sortState} order</p>
-					<svg ref={svgDiameterRef} viewBox='0 0 1500 350'></svg>
+					<svg ref={svgDiameterRef} viewBox='0 0 1520 350'></svg>
 				</div>
 
 				<div className="solar-density">
